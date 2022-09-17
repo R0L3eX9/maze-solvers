@@ -12,7 +12,6 @@ class Grid:
         self._rows: int = screen_size[0] // self._node_in_pixels
         self._cols: int = screen_size[1] // self._node_in_pixels
         self._grid: List[List[Node]] = self.create_grid(self._node_in_pixels)
-        self._grid[4][5].colour = self._util.RED
 
     def create_grid(self, pixels: int) -> List[List[Node]]:
         nodes_list: List[List[Node]] = []
@@ -29,11 +28,14 @@ class Grid:
 
     def add_border(self, surface, node: Node):
         for i in range(4):
-            rect = self._util.create_rect(node.x - i,
-                                          node.y - i,
+            rect = self._util.create_rect(int(node.x) - i,
+                                          int(node.y) - i,
                                           self._node_in_pixels,
                                           self._node_in_pixels)
             pygame.draw.rect(surface, self._util.BLACK, rect,  1)
+
+    def get_grid(self) -> List[List[Node]]:
+        return self._grid
 
     def display_nodes(self, surface):
         for node_list in self._grid:
