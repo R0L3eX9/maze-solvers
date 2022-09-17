@@ -24,7 +24,7 @@ pick the ending cell, after that you are allowed to ban cells as well as remove 
 using right click. Once you are pleased with your setup you can press "Return" to start the algorithm.
 
 ## Showcase:
-![Showcase](./assets/showcase.mp4)
+[![Showcase](https://img.youtube.com/vi/ENhgpeaM5Ls/0.jpg)](https://www.youtube.com/watch?v=ENhgpeaM5Ls "Showcase")
 
 # To do
 * [x] Allow user to pick the start and the end node
